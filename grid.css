@@ -1,0 +1,126 @@
+/* Reset and Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+header {
+    border: 2px solid red;
+    height: 100vh;
+    background-image: url(./images/desktop/image-header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header nav {
+    border: 2px solid rgb(255, 0, 144);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: aliceblue;
+}
+
+header h1 {
+    font-size: 40px;
+    color: aliceblue;
+    margin-top: 80px;
+}
+
+.arrow {
+    margin-top: 30px;
+}
+
+/* Responsive Grid Layouts */
+.egg-layout,
+.grid-section,
+.client-content,
+.grid-container {
+    display: grid;
+    gap: 20px;
+}
+
+.egg-layout {
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+}
+
+.transform-container, .egg-image {
+    width: 100%;
+    height: auto;
+}
+
+.client-testimonial {
+    text-align: center;
+}
+
+.client-testimonial img {
+    border-radius: 100%;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+    .egg-layout {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+    }
+
+    .grid-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .client-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .transform-content, .audience-content {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 30px;
+    }
+    
+    .transform-content h1, .audience-content h1 {
+        font-size: 30px;
+    }
+
+    .client-content {
+        grid-template-columns: 1fr;
+    }
+}
+  b 
